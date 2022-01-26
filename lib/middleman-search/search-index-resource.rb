@@ -32,7 +32,7 @@ module Middleman
 
       def build_index
         # Build js context
-        context = V8::Context.new
+        context = MiniRacer::Context.new
         context.load(lunr_resource('lunr.js'))
 
         if @language != 'en' # English is the default
